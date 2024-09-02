@@ -11,8 +11,8 @@ const FlashSale = () => {
   const handleOpen = (productId) => {
     setIsModalOpen(productId);
   };
-  const handleClose = () => {
-    setIsModalOpen(null);
+  const handleToggle = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
   return (
@@ -52,12 +52,20 @@ const FlashSale = () => {
                     </div>
                   </div>
                 </div>
+                <div className="product-details mt-2">
+                  <p className="mb-2">{item.title}</p>
+                  <p>{item.price} $</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <Modal />
+      <Modal
+        isModalOpen={isModalOpen}
+        handleToggle={handleToggle}
+        data={products.find((item) => item.id)}
+      />
     </div>
   );
 };

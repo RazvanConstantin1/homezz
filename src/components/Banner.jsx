@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     SlideToShow: 1,
