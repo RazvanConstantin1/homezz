@@ -6,7 +6,7 @@ const Category = () => {
     <div>
       <div className="w-10/12 m-auto">
         <div>
-          <div className="flex">
+          <div className="flex flex-col sm:flex-row">
             {category.map((cat, index) => (
               <div className="m-2" key={index}>
                 <div>
