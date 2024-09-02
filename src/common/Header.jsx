@@ -29,7 +29,9 @@ const Header = () => {
       <div className={`${sticky ? "sticky py-4 top-0 z-50 shadow-xl" : ""} `}>
         <div className="w-10/12 m-auto flex flex-wrap justify-between items-center">
           <div>
-            <div className="logo">HomezZ</div>
+            <Link to={"/"} className="logo">
+              HomezZ
+            </Link>
           </div>
           <div className="md:flex flex-wrap text-base py-3">
             {navbar.map((link, index) => {
