@@ -19,20 +19,23 @@ const Banner = () => {
   };
 
   return (
-    <div className="banner">
+    <div className="banner mt-12">
       <div className="w-10/12 m-auto">
         <div>
           <div className="mb-10">
             <div className="header-text">
-              <Link className="flex items-center">
+              <Link to={"/shop"} className="flex items-center">
                 <div className="text-white mr-4 common-hover text-4xl rounded-3xl h-12 w-20 grid place-items-center">
                   <MdOutlineChair />
                 </div>
-                Elevate your lifestyle
+                Discover the perfect touch
               </Link>
-              <p>with Our Furniture</p>
-              Creations
-              <Link className="text-white common-hover text-4xl ml-4 px-7 py-2 !rounded-3xl">
+              <p>for your home </p>
+              with our furniture
+              <Link
+                to={"/shop"}
+                className="text-white common-hover text-4xl ml-4 px-7 py-2 !rounded-3xl"
+              >
                 Shop Now
               </Link>
             </div>

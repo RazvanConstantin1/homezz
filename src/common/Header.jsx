@@ -25,8 +25,12 @@ const Header = () => {
   };
 
   return (
-    <div>
-      <div className={`${sticky ? "sticky py-4 top-0 z-50 shadow-xl" : ""} `}>
+    <>
+      <div
+        className={`${
+          sticky ? "header sticky py-4 top-0 z-50 shadow-xl" : ""
+        } `}
+      >
         <div className="w-10/12 m-auto flex flex-wrap justify-between items-center">
           <div>
             <Link to={"/"} className="logo">
@@ -67,7 +71,7 @@ const Header = () => {
       <div>
         <SideBar isOpenSidebar={isOpenSidebar} toggleSidebar={toggleSidebar} />
       </div>
-    </div>
+    </>
   );
 };
 
