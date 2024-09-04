@@ -83,13 +83,13 @@ const Cart = () => {
                             {item.price}$
                           </td>
                           <td className="text-center px-4 py-2">
-                            <div
-                              className="flex items-center gap-2 mr-3"
-                              onClick={() =>
-                                decreaseQuantity(item.id, item.quantity)
-                              }
-                            >
-                              <button className="border mt-4 py-3 px-6">
+                            <div className="flex items-center gap-2 mr-3">
+                              <button
+                                className="border mt-4 py-3 px-6"
+                                onClick={() =>
+                                  decreaseQuantity(item.id, item.quantity)
+                                }
+                              >
                                 <PiMinus />
                               </button>
                               <span className="border mt-4 py-3 px-6 count">
