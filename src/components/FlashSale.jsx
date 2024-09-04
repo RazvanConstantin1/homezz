@@ -7,12 +7,13 @@ import Heading from "../common/Heading.jsx";
 import Modal from "../common/Modal.jsx";
 
 const FlashSale = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(null);
   const handleOpen = (productId) => {
     setIsModalOpen(productId);
   };
+
   const handleToggle = () => {
-    setIsModalOpen(!isModalOpen);
+    setIsModalOpen(null);
   };
 
   return (
@@ -60,12 +61,12 @@ const FlashSale = () => {
             </div>
           ))}
         </div>
+        <Modal
+          isModalOpen={isModalOpen}
+          handleToggle={handleToggle}
+          data={products.find((item) => item.id === isModalOpen)}
+        />
       </div>
-      <Modal
-        isModalOpen={isModalOpen}
-        handleToggle={handleToggle}
-        data={products.find((item) => item.id)}
-      />
     </div>
   );
 };
