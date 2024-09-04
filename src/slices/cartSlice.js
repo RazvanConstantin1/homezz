@@ -39,9 +39,33 @@ const cartSlice = createSlice({
       }
     },
 
-    updateQuantity: (state, action) => {},
-    removeItem: (state, action) => {},
-    getCartTotal: (state, action) => {},
+    updateQuantity: (state, action) => {
+      const { id, quantity } = action.payload;
+      const productIndex = state.data.findIndex((product) => product.id === id);
+      if (productIndex !== -1) {
+        const updateProduct = {
+          ...state.data[productIndex],
+          quantity: Math.max(quantity || 1, 1),
+        };
+        updateProduct.totalPrice = updateProduct.price * updateProduct.quantity;
+
+        state.data[productIndex] = updateProduct;
+        storeInLocalStorage(state.data);
+      }
+    },
+    removeItem: (state, action) => {
+      const tempCart = state.data.filter(
+        (product) => product.id === action.payload.id
+      );
+      state.data = tempCart;
+      storeInLocalStorage(state.data);
+    },
+    getCartTotal: (state) => {
+      state.totalAmount = state.data.reduce((cartTotal, cartItem) => {
+        return cartTotal + cartItem.totalPrice;
+      }, 0);
+      state.totalItems = state.data.length;
+    },
   },
 });
 

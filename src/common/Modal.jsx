@@ -3,7 +3,11 @@ import { FaTimes } from "react-icons/fa";
 import { PiMinus, PiPlus } from "react-icons/pi";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { addToCart } from "../slices/cartSlice.js";
+import {
+  addToCart,
+  getCartTotal,
+  updateQuantity,
+} from "../slices/cartSlice.js";
 
 const Modal = ({ isModalOpen, handleToggle, data }) => {
   const [qty, setQty] = useState(1);
@@ -20,6 +24,7 @@ const Modal = ({ isModalOpen, handleToggle, data }) => {
     };
 
     dispatch(addToCart(tempProduct));
+    dispatch(getCartTotal());
     setAddedItemToCart(true);
   };
 
@@ -30,6 +35,19 @@ const Modal = ({ isModalOpen, handleToggle, data }) => {
       setAddedItemToCart(false);
     }
   }, [isModalOpen]);
+
+  const increaseQuantity = (itemId, correctQuantity) => {
+    const newQty = correctQuantity + 1;
+    setQty(newQty);
+
+    dispatch(updateQuantity({ id: itemId, quantity: newQty }));
+  };
+  const decreaseQuantity = (itemId, correctQuantity) => {
+    const newQty = Math.max(correctQuantity - 1, 1);
+    setQty(newQty);
+
+    dispatch(updateQuantity({ id: itemId, quantity: newQty }));
+  };
 
   return (
     <div>
@@ -70,11 +88,17 @@ const Modal = ({ isModalOpen, handleToggle, data }) => {
                 <p className="text-green-700 m-0">In stock 400 pieces</p>
                 <div className="flex items-center">
                   <div className="flex items-center gap-2 mr-3">
-                    <button className="border mt-4 py-3 px-6">
+                    <button
+                      className="border mt-4 py-3 px-6"
+                      onClick={() => decreaseQuantity(data.id, qty)}
+                    >
                       <PiMinus />
                     </button>
-                    <span className="border mt-4 py-3 px-6 count">1</span>
-                    <button className="border mt-4 py-3 px-6">
+                    <span className="border mt-4 py-3 px-6 count">{qty}</span>
+                    <button
+                      className="border mt-4 py-3 px-6"
+                      onClick={() => increaseQuantity(data.id, qty)}
+                    >
                       <PiPlus />
                     </button>
                   </div>
