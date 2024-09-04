@@ -4,6 +4,7 @@ import { navbar } from "../data/Data.js";
 import { HiOutlineHeart, HiOutlineUser } from "react-icons/hi";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import SideBar from "../common/SideBar.jsx";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [sticky, setSticky] = useState(false);
@@ -23,6 +24,8 @@ const Header = () => {
   const toggleSidebar = () => {
     setIsOpenSidebar(!isOpenSidebar);
   };
+
+  const { totalItems } = useSelector((state) => state.cart);
 
   return (
     <>
@@ -62,7 +65,7 @@ const Header = () => {
               <MdOutlineShoppingBag />
 
               <div className="items_count">
-                <span className="text-white">0</span>
+                <span className="text-white">{totalItems}</span>
               </div>
             </Link>
           </li>

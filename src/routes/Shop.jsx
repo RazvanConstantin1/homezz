@@ -13,7 +13,7 @@ const Shop = () => {
   const handleOpen = (productId) => {
     setIsModalOpen(productId);
   };
-  const handleClose = () => {
+  const handleToggle = () => {
     setIsModalOpen(null);
   };
 
@@ -177,7 +177,7 @@ const Shop = () => {
         <Modal
           data={products.find((item) => item.id === isModalOpen)}
           isModalOpen={isModalOpen}
-          handleClose={handleClose}
+          handleToggle={handleToggle}
         />
       </div>
     </div>
