@@ -65,7 +65,7 @@ export const products = [
   {
     id: 1,
     img: "./assets/chair/1.jpeg",
-    category: "bestsell",
+    category: "Best Sell",
     brand: "Old Brand",
     title: "Natural Wood Dining Chair",
     short_description: "Lorem ipsum dolor",
@@ -87,7 +87,7 @@ export const products = [
   {
     id: 3,
     img: "./assets/chair/3.jpeg",
-    category: "bestsell",
+    category: "Best Sell",
     brand: "Latest Brand",
     title: "Best Chair",
     short_description: "Lorem ipsum dolor",
@@ -109,7 +109,7 @@ export const products = [
   {
     id: 5,
     img: "./assets/chair/5.jpeg",
-    category: "bestsell",
+    category: "Best Sell",
     brand: "Latest Brand",
     title: "Sitting Chair",
     short_description: "Lorem ipsum dolor",
@@ -132,7 +132,7 @@ export const products = [
   {
     id: 7,
     img: "./assets/chair/7.jpeg",
-    category: "bestsell",
+    category: "Best Sell",
     brand: "Latest Brand",
     title: "Beautiful Chair",
     short_description: "Lorem ipsum dolor",
@@ -176,7 +176,7 @@ export const products = [
   {
     id: 11,
     img: "./assets/chair/11.jpeg",
-    category: "bestsell",
+    category: "Best Sell",
     brand: "Indian",
     title: "Old Chair",
     short_description: "Lorem ipsum dolor",
@@ -198,7 +198,7 @@ export const products = [
   {
     id: 13,
     img: "./assets/chair/13.jpeg",
-    category: "bestsell",
+    category: "Best Sell",
     brand: "Indian",
     title: "New Brand Chair",
     short_description: "Lorem ipsum dolor",
@@ -219,89 +219,9 @@ export const products = [
   },
 ];
 
-export const arriveItems = [
-  {
-    id: 1,
-    img: "./assets/chair/insta-1.jpg",
-  },
-  {
-    id: 2,
-    img: "./assets/chair/insta-2.jpg",
-  },
-  {
-    id: 3,
-    img: "./assets/chair/insta-3.jpg",
-  },
-  {
-    id: 4,
-    img: "./assets/chair/insta-4.jpg",
-  },
-  {
-    id: 5,
-    img: "./assets/chair/insta-5.jpg",
-  },
-  {
-    id: 6,
-    img: "./assets/chair/insta-6.jpg",
-  },
-];
-
-export const offer = [
-  {
-    customer_img: "./assets/creation.jpg",
-    title: "CRAFT OWN FURNITURE",
-    subtitle: "Your new forever favorites are here",
-  },
-];
-
-export const brands = [
-  {
-    id: 1,
-    img: "./assets/chair/1.jpeg",
-    title: "Coty",
-    short_description: "Grab a deal Airspun Products",
-  },
-  {
-    id: 2,
-    img: "./assets/chair/2.jpg",
-    title: "Laten",
-    short_description: "Grab a deal Airspun Products",
-  },
-  {
-    id: 3,
-    img: "./assets/chair/3.png",
-    title: "Imagic",
-    short_description: "Grab a deal Airspun Products",
-  },
-  {
-    id: 4,
-    img: "./assets/chair/4.png",
-    title: "Pee Safe",
-    short_description: "Grab a deal Airspun Products",
-  },
-  {
-    id: 5,
-    img: "./assets/chair/5.jpg",
-    title: "Maybeleine",
-    short_description: "Grab a deal Airspun Products",
-  },
-  {
-    id: 6,
-    img: "./assets/chair/6.png",
-    title: "The Purest",
-    short_description: "Grab a deal Airspun Products",
-  },
-];
-
 export const footer = [
   {
     id: 1,
-    header: "Our Store",
-    content1:
-      "Miniture is one of the biggest international fashion companies, one of the world’s largest distribution groups.",
-  },
-  {
-    id: 2,
     header: "Quick Links",
     content1: "My Account",
     content2: "Shopping Cart",
@@ -309,7 +229,7 @@ export const footer = [
     content4: "Product Compare",
   },
   {
-    id: 3,
+    id: 2,
     header: "Information",
     content1: "Privacy Policy",
     content2: "Refund Policy",
@@ -317,7 +237,7 @@ export const footer = [
     content4: "Terms & Condition",
   },
   {
-    id: 4,
+    id: 3,
     header: "Let's Get In Touch",
     content1: "Sign Up For Our newsletter and receive 10% off your",
   },

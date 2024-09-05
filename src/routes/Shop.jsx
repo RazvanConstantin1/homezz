@@ -68,8 +68,8 @@ const Shop = () => {
       <PageHeading home={"home"} pagename={"Shop"} />
 
       <div>
-        <div className="w-10/12 m-auto flex gap-3 items-start mt-8 ">
-          <div className="filterproduct w-1/4 bg-white shadow-lg p-4">
+        <div className="w-10/12 m-auto flex flex-col md:flex-row gap-3 items-start my-8 ">
+          <div className="filterproduct w-full md:w-1/4 bg-white shadow-lg p-4">
             <div>
               <div className="my-4">
                 <h1 className="text-4xl font-semibold">Filter</h1>
@@ -131,8 +131,8 @@ const Shop = () => {
               </div>
             </div>
           </div>
-          <div className="w-8/12">
-            <div className="grid grid-cols-3 gap-3">
+          <div className="w-full md:w-8/12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {filteredProducts.map((item, index) => (
                 <div key={index}>
                   <div className="overflow-hidden relative ml-4">

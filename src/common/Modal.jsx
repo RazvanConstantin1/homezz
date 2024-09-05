@@ -53,21 +53,21 @@ const Modal = ({ isModalOpen, handleToggle, data }) => {
     <div>
       {isModalOpen && (
         <div className="modal-overlay">
-          <div className="modal-content w-2/3 relative bg-white overflow-hidden">
+          <div className="modal-content w-3/3 sm:w-2/3 relative bg-white overflow-hidden p-4">
             <span
               className="absolute cursor-pointer top-0 right-0 p-4"
               onClick={() => handleToggle()}
             >
               <FaTimes />
             </span>
-            <div className="flex">
+            <div className="flex flex-col md:flex-row">
               <div>
                 <div className="flash_sale_img">
                   <img src={data.img} alt="" />
                 </div>
               </div>
               <div className="relative ml-6">
-                <p className="mb-2 font-bold">{data.short_description}</p>
+                <p className="mb-2 font-bold">{data.title}</p>
                 <p className="text-red-600 text-xl">{data.price}$</p>
                 <p className="my-2">{data.description}</p>
                 <div className="flex items-center mb-2">
@@ -86,7 +86,7 @@ const Modal = ({ isModalOpen, handleToggle, data }) => {
                   </select>
                 </div>
                 <p className="text-green-700 m-0">In stock 400 pieces</p>
-                <div className="flex items-center">
+                <div className="flex-col md:flex-row items-center justify-center">
                   <div className="flex items-center gap-2 mr-3">
                     <button
                       className="border mt-4 py-3 px-6"
