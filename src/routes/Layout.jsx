@@ -4,7 +4,7 @@ import Header from "../common/Header.jsx";
 import Footer from "../common/Footer.jsx";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 
-const RootLayout = () => {
+const Layout = () => {
   return (
     <div>
       <Header />
@@ -15,4 +15,4 @@ const RootLayout = () => {
   );
 };
 
-export default RootLayout;
+export default Layout;
