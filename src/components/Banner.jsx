@@ -48,7 +48,7 @@ const Banner = () => {
           <Slider {...settings}>
             {banners.map((item, index) => (
               <div key={index}>
-                <img src={item.banner} alt="" />
+                <img src={item.banner} alt="furniture image" />
               </div>
             ))}
           </Slider>

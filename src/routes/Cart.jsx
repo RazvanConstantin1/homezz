@@ -42,7 +42,7 @@ const Cart = () => {
           ) : (
             <div>
               <div>
-                <table className="w-full shadow-xl rounded-2xl">
+                <table className="w-full shadow-xl rounded-2xl table-auto">
                   <thead className="bg-blue-950 text-white font-semibold">
                     <tr>
                       <th className="px-4 py-2"></th>
@@ -66,7 +66,7 @@ const Cart = () => {
                             </span>
                           </td>
                           <td className="text-center px-4 py-2">
-                            <div className="flex">
+                            <div className="flex-col sm:flex-row">
                               <div>
                                 <img
                                   src={item.img}
@@ -114,7 +114,7 @@ const Cart = () => {
                   </tbody>
                 </table>
 
-                <div className="p-6 w-2/5 bg-white shadow-2xl mt-4 rounded-2xl">
+                <div className="p-6 w-full h-full lg:w-2/5 bg-white shadow-2xl mt-4 rounded-2xl mb-8">
                   <h1 className="mb-4 text-center text-3xl">Cart Total</h1>
                   <h2 className="flex justify-between mt-3">
                     Sub Total: <span>{totalAmount}</span>
@@ -125,7 +125,7 @@ const Cart = () => {
                   <div className="flex justify-between mt-3">
                     Grand Total: <span>{totalAmount + 10} $</span>
                   </div>
-                  <div className="flex items-center whitespace-nowrap justify-between mt-4">
+                  <div className="flex items-center whitespace-nowrap justify-between mt-4 gap-2">
                     <div className="px-4 py-2 common-hover rounded-lg text-white cursor-pointer">
                       <div>Checkout</div>
                     </div>

@@ -23,13 +23,13 @@ export const navbar = [
 
 export const banners = [
   {
-    banner: "./assets/slider-1.jpeg",
+    banner: "./assets/slider-1.jpg",
   },
   {
-    banner: "./assets/slider-2.jpeg",
+    banner: "./assets/slider-2.jpg",
   },
   {
-    banner: "./assets/slider-3.jpeg",
+    banner: "./assets/slider-3.jpg",
   },
 ];
 

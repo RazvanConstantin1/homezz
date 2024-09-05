@@ -72,7 +72,7 @@ const SideBar = ({ isOpenSidebar, toggleSidebar }) => {
                   <h2>
                     Sub Total : <span>{totalAmount} $</span>
                   </h2>
-                  <div className="ml-4 bg-white hover:bg-[#ffa832] py-3 px-6 text-black cursor-pointer">
+                  <div className="ml-4 bg-white hover:bg-[#ffa832] py-3 sm:px-6 text-black cursor-pointer">
                     <Link to="/cart" className="p-2 ">
                       View Cart
                     </Link>

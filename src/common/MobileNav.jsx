@@ -6,10 +6,10 @@ const MobileNav = ({ mobileNav, handleMobileNav }) => {
   return (
     <div
       style={{ transform: `translateX(${mobileNav ? "0" : "-100%"})` }}
-      className="block lg:hidden transition-transform duration-300 ease-in-out fixed left-0 top-20 w-[50dvh] h-[30dvh] z-50"
+      className="block lg:hidden transition-transform duration-300 ease-in-out fixed left-0 top-20 w-[60dvh] h-[30dvh] z-50"
     >
       {mobileNav && (
-        <div className=" bg-white flex flex-col justify-center items-center gap-4 py-20">
+        <div className=" bg-white flex flex-col justify-center items-center gap-4 py-20 shadow-lg">
           {navbar.map((link, index) => {
             return (
               <div key={index} onClick={handleMobileNav} className="mr-8">
