@@ -20,7 +20,7 @@ const FlashSale = () => {
     <div>
       <div className="w-10/12 m-auto">
         <Heading />
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-4 gap-3 mb-8">
           {products.map((item, index) => (
             <div key={index} className="mt-8">
               <div className="overflow-hidden relative">

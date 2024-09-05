@@ -2,12 +2,20 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { navbar } from "../data/Data.js";
 import { HiOutlineHeart, HiOutlineUser } from "react-icons/hi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import SideBar from "../common/SideBar.jsx";
 import { useSelector } from "react-redux";
+import MobileNav from "./mobileNav.jsx";
 
 const Header = () => {
   const [sticky, setSticky] = useState(false);
+
+  const [mobileNav, setMobileNav] = useState(false);
+
+  const handleMobileNav = () => {
+    setMobileNav(!mobileNav);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,13 +42,17 @@ const Header = () => {
           sticky ? "header sticky py-4 top-0 z-50 shadow-xl" : ""
         } `}
       >
-        <div className="w-10/12 m-auto flex flex-wrap justify-between items-center">
+        <div className="w-10/12 m-auto flex flex-wrap justify-between items-center py-4">
+          <div className="block lg:hidden relative" onClick={handleMobileNav}>
+            <GiHamburgerMenu className="w-[2em] h-[3em]" />
+          </div>
+          <MobileNav mobileNav={mobileNav} handleMobileNav={handleMobileNav} />
           <div>
             <Link to={"/"} className="logo">
               HomezZ
             </Link>
           </div>
-          <div className="md:flex flex-wrap text-base py-3">
+          <div className="lg:flex flex-wrap text-base py-3 hidden">
             {navbar.map((link, index) => {
               return (
                 <div key={index} className="mr-5">
@@ -54,14 +66,14 @@ const Header = () => {
               );
             })}
           </div>
-          <li className="flex flex-wrap">
-            <Link className="mr-5 text-2xl">
+          <li className="flex flex-wrap gap-2">
+            <Link className="text-2xl">
               <HiOutlineHeart />
             </Link>
-            <Link className="mr-5 text-2xl">
+            <Link className="text-2xl">
               <HiOutlineUser />
             </Link>
-            <Link className="relative mr-5 text-2xl" onClick={toggleSidebar}>
+            <Link className="relative text-2xl" onClick={toggleSidebar}>
               <MdOutlineShoppingBag />
 
               <div className="items_count">
