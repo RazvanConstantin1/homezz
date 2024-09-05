@@ -1,8 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootLayout from "./routes/RootLayout.jsx";
 import NotFoundPage from "./routes/NotFoundPage.jsx";
+import RootLayout from "./routes/RootLayout.jsx";
 import Home from "./routes/Home.jsx";
 import Cart from "./routes/Cart.jsx";
 import Shop from "./routes/Shop.jsx";
