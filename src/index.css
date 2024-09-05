@@ -45,6 +45,8 @@
 
 body {
   font-family: var(--site-main-font);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .header {

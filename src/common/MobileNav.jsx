@@ -4,12 +4,15 @@ import { navbar } from "../data/Data.js";
 
 const MobileNav = ({ mobileNav, handleMobileNav }) => {
   return (
-    <div>
+    <div
+      style={{ transform: `translateX(${mobileNav ? "0" : "-100%"})` }}
+      className="block lg:hidden transition-transform duration-300 ease-in-out fixed left-0 top-20 w-[50dvh] h-[30dvh] z-50"
+    >
       {mobileNav && (
-        <div className="absolute left-0 top-20 w-full h-[30dvh] bg-white flex flex-col items-center gap-4 pt-10 z-50">
+        <div className=" bg-white flex flex-col justify-center items-center gap-4 py-20">
           {navbar.map((link, index) => {
             return (
-              <div key={index} className="mr-5" onClick={handleMobileNav}>
+              <div key={index} onClick={handleMobileNav} className="mr-8">
                 <NavLink
                   to={link.path}
                   className="p-2 link-hover transition-all text-xl"

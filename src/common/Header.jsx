@@ -37,16 +37,18 @@ const Header = () => {
 
   return (
     <>
+      <MobileNav mobileNav={mobileNav} handleMobileNav={handleMobileNav} />
+
       <div
         className={`${
           sticky ? "header sticky py-4 top-0 z-50 shadow-xl" : ""
         } `}
       >
-        <div className="w-10/12 m-auto flex flex-wrap justify-between items-center py-4">
+        <div className=" w-full md:w-10/12 m-auto flex flex-wrap justify-between items-center py-4 px-6">
           <div className="block lg:hidden relative" onClick={handleMobileNav}>
             <GiHamburgerMenu className="w-[2em] h-[3em]" />
           </div>
-          <MobileNav mobileNav={mobileNav} handleMobileNav={handleMobileNav} />
+
           <div>
             <Link to={"/"} className="logo">
               HomezZ
