@@ -5,8 +5,8 @@ import { HiOutlineHeart, HiOutlineUser } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import SideBar from "../common/SideBar.jsx";
+import MobileNav from "./mobileNav.jsx";
 import { useSelector } from "react-redux";
-import MobileNav from "./MobileNav.jsx";
 
 const Header = () => {
   const [sticky, setSticky] = useState(false);
